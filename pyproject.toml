@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "gstreamer-python"
+version = "0.0.2"
+description = "PyGst Utils package"
+authors = ["LifeStyleTransfer <taras@lifestyletransfer.com>"]
+packages = [
+    { include = "gstreamer" }
+]
+include = ["pyproject.toml"] # Makes single-source version value work when distributed.
+license = "Apache Software License 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+attrs  = ">=19.3.0"
+numpy  = ">=1.14.3"
+pycairo = ">=1.18.2"
+PyGObject = "*"
+
+[tool.poetry.group.dev.dependencies]
+black="*"
+flake8=">=3.7.9"
+pytest = ">=5.3.2"
+pytest-benchmark = ">=3.2.2"
+autopep8 = ">=1.4.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
